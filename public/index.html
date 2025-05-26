@@ -24,20 +24,99 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Meet landing page</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="root">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+	<header>
+		<div class="meet-logo">
+      <img src="../assets/logo.svg">
+    </div>
+		<div class="header-contents">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+
+			<div class="header-hero-touchscreen">
+				<img src="../assets/mobile/image-hero.png" alt="Faces of Meet users">
+      </div>
+
+			<div class="header-hero-desktop hero-left">
+				<img src="../assets/desktop/image-hero-left.png" alt="Faces of Meet users">
+			</div>
+
+			<div class="header-text-buttons">
+				<h1>Group Chat for Everyone</h1>
+				<p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+				<div class="button-wrapper">
+					<button>Download v1.3</button>
+					<button>What is it?</button>
+				</div>
+			</div>
+
+			<div class="header-hero-desktop hero-right">
+				<img src="../assets/desktop/image-hero-right.png" alt="Faces of Meet users">
+      </div>
+
+		</div>
+	</header>
+	<main>
+
+    <div class="number-component">
+      <div class="vertical-line">
+        <p class="number">01</p>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="../assets/mobile/image-woman-in-videocall.jpg" alt="Woman in videocall">
+      <img src="../assets/mobile/image-women-videochatting.jpg" alt="Women videochatting">
+      <img src="../assets/mobile/image-men-in-meeting.jpg" alt="Men in meeting">
+      <img src="../assets/mobile/image-man-texting.jpg" alt="Man texting">
+    </div>
+
+    <div>
+      <div class="tagline"><p>Built for modern use</p></div>
+      <div class="main-text">
+        <p class="h2-like">Smarter meetings, all in one place</p>
+        <p class="description">
+          Send messages, share files, show your screen, and record your meetings — all in one 
+          workspace. Control who can join with invite-only team access, data encryption, and data export.
+        </p>
+      </div>
+    </div>
+
+	</main>
+	<footer>
+    <div class="footer-background"></div>
+    <div class="footer-background"></div>
+    <!-- ?Add an image tag, with an inline media query for image source -->
+
+    <div class="number-component">
+      <div class="vertical-line">
+        <p class="number">02</p>
+      </div>
+    </div>
+
+    <div class="main-text">
+      <p class="h2-like">Experience more together</p>
+      <p class="description">
+        Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
+      </p>
+    </div>
+
+    <button>Download v1.3</button>
+
+		<div class="attribution"></div>
+	</footer>
+
+    </div>  
   </body>
 </html>
