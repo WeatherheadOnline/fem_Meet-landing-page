@@ -1,0 +1,5 @@
+Created a react app on the command line in VS Code, named fem_meet_landing_page.
+https://www.c-sharpcorner.com/article/create-your-first-react-app-in-vs-code/
+
+Initialized this notes.txt file in the same folder.
+Downloaded the started zip files to the same folder.
