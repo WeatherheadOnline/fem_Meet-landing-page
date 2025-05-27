@@ -1,0 +1,23 @@
+@use "index.sass" as styles
+
+button
+    @extend %text-preset-5
+    color: styles.$white
+    border: none
+    height: styles.$button-height
+    border-radius: calc(styles.$button-height / 2)
+    width: max-content
+    margin: 0 auto
+    padding: 0 3.5rem
+
+.button-cyan
+    background-color: styles.$cyan-600
+
+.button-cyan span 
+    color: styles.$cyan-300
+
+.button-purple
+    background-color: styles.$purple-600
+
+.button-purple span 
+    color: styles.$purple-300

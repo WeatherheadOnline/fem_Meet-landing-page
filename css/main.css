@@ -2,40 +2,111 @@ html {
   font-size: 10px;
 }
 
-.number p {
+h1 {
+  font-weight: 900;
+  font-size: 6.4rem;
+  line-height: 110%;
+  letter-spacing: 0;
+}
+
+.h2-like {
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 110%;
+  letter-spacing: 0;
+}
+
+.tagline {
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 110%;
+  letter-spacing: 4px;
+}
+
+.header-text-buttons p, .description {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.number p, button {
   font-weight: 900;
   font-size: 1.6rem;
   line-height: 150%;
   letter-spacing: 0;
 }
 
+button {
+  color: #fafafa;
+  border: none;
+  height: 5.6rem;
+  border-radius: 2.8rem;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  padding: 0 3.5rem;
+}
+
+.button-cyan {
+  background-color: rgb(77, 150, 169);
+}
+
+.button-cyan span {
+  color: #8fe3f9;
+}
+
+.button-purple {
+  background-color: #855fb1;
+}
+
+.button-purple span {
+  color: #d9b8ff;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main, header, footer {
+  outline: 1px solid rgba(255, 0, 0, 0.1254901961);
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Red Hat Display";
   font-optical-sizing: auto;
   background-color: #fafafa;
+  max-width: 100vw;
+  text-align: center;
 }
 
-.header-contents {
-  width: 100%;
+header {
   display: flex;
-  flex-direction: row;
-}
-@media (hover: none) {
-  .header-contents {
-    flex-direction: column;
-  }
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vw;
+  padding: 6.4rem 3.2rem;
 }
 
-.header-contents img {
-  size: 50%;
+.meet-logo img {
+  width: 11.8rem;
+  height: auto;
+  text-align: center;
+  margin-top: 4.8rem;
 }
 
+.header-hero-touchscreen {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 42.5vw;
+  background-image: url(../assets/mobile/image-hero.png);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 6.4rem;
+}
 @media (hover: hover) {
   .header-hero-touchscreen {
     display: none;
@@ -51,9 +122,28 @@ body {
   }
 }
 
+.header-contents {
+  display: flex;
+  flex-direction: column;
+}
+@media (hover) {
+  .header-contents {
+    flex-direction: row;
+  }
+}
+
+.header-contents img {
+  width: 115vw;
+}
+
+.header-text-buttons p {
+  padding: 2.4rem 0;
+}
+
 .button-wrapper {
   display: flex;
   flex-direction: column;
+  gap: 1.6rem;
 }
 @media (min-width: 70rem) {
   .button-wrapper {
@@ -61,13 +151,27 @@ body {
   }
 }
 
+footer {
+  padding: 10.8rem 0;
+  position: relative;
+}
+
 main {
-  background-color: pink;
+  margin: 10.8rem 0;
+  position: relative;
+  padding: 0 6.4rem;
+}
+
+.tagline {
+  text-transform: uppercase;
 }
 
 .image-container {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr;
+  padding-top: 100px;
+  width: 100%;
+  gap: 1.6rem;
 }
 @media (min-width: 70rem) {
   .image-container {
@@ -76,12 +180,9 @@ main {
 }
 
 .image-container img {
-  width: 20vw;
+  width: 100%;
   height: auto;
-}
-
-footer {
-  text-align: center;
+  border-radius: 0.8rem;
 }
 
 .number-component {
@@ -91,19 +192,14 @@ footer {
   position: absolute;
   top: -10.8rem;
   left: 50%;
-}
-
-main, footer {
-  margin-top: 10.8rem;
-  padding: 10.8rem 0;
-  position: relative;
+  transform: translatex(-2.8rem);
 }
 
 .vertical-line {
   height: 10.8rem;
   display: flex;
   align-items: flex-end;
-  background: linear-gradient(to right, transparent 48%, #28283d 49%, #28283d 51%, transparent 52%);
+  background: linear-gradient(to right, transparent 48%, #28283d 49.5%, #28283d 50.5%, transparent 52%);
 }
 
 .number {
@@ -122,21 +218,22 @@ main, footer {
   margin: 0 auto;
 }
 
-.footer-background {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
+main .main-text {
+  padding-bottom: 6.4rem;
 }
 
-.footer-background:first-child {
-  background-color: #4d96a9;
-}
-
-.footer-background:nth-child(2) {
-  background-image: url(../assets/desktop/image-footer.jpg);
-  opacity: 0.5;
+footer {
+  background: linear-gradient(rgba(77, 150, 169, 0.85), rgba(77, 150, 169, 0.85)), url(../assets/mobile/image-footer.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer div.main-text {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 100rem) {
+  footer div.main-text {
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=main.css.map */
