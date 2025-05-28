@@ -5,17 +5,19 @@ header
     flex-direction: column
     align-items: center
     padding:  styles.$spacing-800-64  styles.$spacing-400-32 
-    @media (hover: hover) and (min-width: 1120px)
+    @media (min-width: 700px)
+        padding-left: 0
+        padding-right: 0
 
 .header-contents
     display: flex
     flex-direction: column
-    @media (hover) and (min-width: 700px)
-        width: 100vw
+    @media (hover) and (min-width: 700px) 
+        width: 100%
         flex-direction: row
         justify-content: center
         gap: styles.$spacing-400-32
-    @media (hover) and (min-width: 890px)
+    @media (hover) and (min-width: 890px) 
         gap: styles.$spacing-800-64
     @media (hover) and (min-width: 1120px)
         gap: styles.$spacing-1400-112

@@ -71,7 +71,9 @@ button {
 .button-cyan {
   background-color: rgb(77, 150, 169);
 }
-
+.button-cyan:hover {
+  background-color: #71C0D4;
+}
 .button-cyan span {
   color: #8fe3f9;
 }
@@ -79,7 +81,9 @@ button {
 .button-purple {
   background-color: #855fb1;
 }
-
+.button-purple:hover {
+  background-color: #B18BDD;
+}
 .button-purple span {
   color: #d9b8ff;
 }
@@ -122,13 +126,20 @@ header {
   align-items: center;
   padding: 6.4rem 3.2rem;
 }
+@media (min-width: 700px) {
+  header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .header-contents {
   display: flex;
   flex-direction: column;
 }
 @media (hover) and (min-width: 700px) {
   .header-contents {
-    width: 100vw;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
     gap: 3.2rem;
@@ -343,11 +354,16 @@ footer p.h2-like, footer p.description {
   padding: 0;
 }
 
+html {
+  width: 100vw;
+}
+
 body {
   font-family: "Red Hat Display";
   font-optical-sizing: auto;
   background-color: #fafafa;
-  max-width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
   text-align: center;
   color: #87879d;
 }
