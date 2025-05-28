@@ -47,6 +47,11 @@ button {
   margin: 0 auto;
   padding: 0 3.5rem;
 }
+@media (min-width: 700px) {
+  button {
+    margin: unset;
+  }
+}
 
 .button-cyan {
   background-color: rgb(77, 150, 169);
@@ -84,13 +89,18 @@ body {
   text-align: center;
   margin-top: 4.8rem;
 }
+@media (hover: hover) and (min-width: 700px) {
+  .meet-logo img {
+    margin-top: 5.2rem;
+  }
+}
 
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 100vw;
-  padding: 6.4rem 3.2rem 4rem;
+  padding: 6.4rem 3.2rem;
 }
 
 .header-hero-touchscreen {
@@ -104,7 +114,12 @@ header {
   background-repeat: no-repeat;
   margin-bottom: 6.4rem;
 }
-@media (hover: hover) {
+@media (hover: none) and (min-width: 700px) {
+  .header-hero-touchscreen {
+    height: 39.5vw;
+  }
+}
+@media (hover: hover) and (min-width: 700px) {
   .header-hero-touchscreen {
     display: none;
   }
@@ -135,38 +150,53 @@ header {
 
 h1 {
   margin-bottom: 2.4rem;
+  text-wrap: balance;
+}
+
+header p {
+  text-wrap: balance;
 }
 
 .button-wrapper {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  padding: 2.4rem 0;
+  padding: 2.4rem 0 0;
 }
-@media (min-width: 70rem) {
+@media (min-width: 700px) {
   .button-wrapper {
     flex-direction: row;
+    justify-content: center;
+    gap: 1.6rem;
   }
 }
 
-footer {
-  padding: 10.8rem 0;
-  position: relative;
-}
-
 main {
-  margin: 10.8rem 0;
+  margin: 10.8rem auto;
   position: relative;
   padding: 0 3.2rem;
+  width: 100%;
 }
-
-.tagline {
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
+@media (hover: none) and (min-width: 700px) {
+  main {
+    width: 86vw;
+  }
 }
-
-.h2-like {
-  margin-bottom: 3.2rem;
+@media (hover) {
+  main {
+    width: 40rem;
+  }
+}
+@media (hover: hover) and (min-width: 700px) {
+  main {
+    width: 70rem;
+    max-width: 112rem;
+  }
+}
+@media (hover: hover) and (min-width: 1120px) {
+  main {
+    width: 112rem;
+  }
 }
 
 .image-container {
@@ -175,9 +205,9 @@ main {
   padding-top: 100px;
   width: 100%;
   gap: 1.6rem;
-  margin-bottom: 6.4rem;
+  margin: 0 auto 6.4rem;
 }
-@media (min-width: 70rem) {
+@media (min-width: 700px) {
   .image-container {
     grid-template: 1fr/repeat(4, 1fr);
   }
@@ -187,6 +217,15 @@ main {
   width: 100%;
   height: auto;
   border-radius: 0.8rem;
+}
+
+.tagline {
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.h2-like {
+  margin-bottom: 3.2rem;
 }
 
 .number-component {
@@ -231,15 +270,16 @@ footer {
   background: linear-gradient(rgba(77, 150, 169, 0.85), rgba(77, 150, 169, 0.85)), url(../assets/mobile/image-footer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 6.4rem 3.2rem 4rem;
+  padding: 6.4rem 3.2rem;
   color: #fafafa;
+  position: relative;
 }
 
 footer div.main-text {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 100rem) {
+@media (min-width: 1120px) {
   footer div.main-text {
     flex-direction: row;
   }
