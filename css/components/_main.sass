@@ -1,0 +1,46 @@
+@use "../index.sass" as styles
+    
+main 
+    margin: styles.$number-line-height auto
+    position: relative
+    padding: 0 styles.$spacing-400-32
+    width: 100%
+    @media (hover: none) and (min-width: 700px)
+        width: 86vw
+    @media (hover)
+        width: 40rem
+    @media (hover: hover) and (min-width: 700px)
+        width: 70rem
+        max-width: styles.$breakpoint-desktop
+    @media (hover:hover) and (min-width: 1120px) 
+        width: 112rem
+    .main-text
+        padding-bottom: styles.$spacing-800-64
+
+.image-container
+    display: grid
+    grid-template: 1fr 1fr / 1fr 1fr
+    padding-top: 100px
+    width: 100%
+    gap: styles.$spacing-200-16
+    margin: 0 auto styles.$spacing-800-64
+    @media (min-width: 700px)
+        grid-template: 1fr / repeat(4, 1fr) 
+    img 
+        width: 100%
+        height: auto
+        border-radius: styles.$spacing-100-8
+
+.tagline
+    @extend %text-preset-3
+    text-transform: uppercase
+    margin-bottom: styles.$spacing-200-16
+    color: styles.$cyan-600
+
+.main-text-wrapper
+    @media (hover) and (min-width: 700px)
+        width: 40rem
+        margin-left: auto
+        margin-right: auto
+    // @media (hover) and (min-width: 1120px)
+    //     width: 50rem

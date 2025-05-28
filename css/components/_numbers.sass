@@ -1,0 +1,29 @@
+@use "../index.sass" as styles
+
+.number-component 
+    margin: 0 auto
+    width: max-content
+    position: absolute
+    top: calc(0rem - styles.$number-line-height)
+    left: 50%
+    transform: translatex(calc(0rem - styles.$button-height / 2))
+
+.vertical-line
+    height: styles.$number-line-height
+    display: flex
+    align-items: flex-end
+    background: linear-gradient(to right, transparent 48%, styles.$slate-300 49.5%, styles.$slate-300 50.5%, transparent 52%)
+    
+.number
+    background-color: styles.$white
+    border: 2px solid styles.$slate-300
+    border-radius: 50%
+    margin: 0
+    height: calc(styles.$button-height + 0.2rem)
+    width: calc(styles.$button-height + 0.2rem)
+    display: flex
+    align-items: center
+    transform: translateY(calc(styles.$button-height / 2)) 
+    p
+        @extend %text-preset-5
+        margin: 0 auto

@@ -1,0 +1,21 @@
+@use "../index.sass" as styles
+    
+footer
+    background: linear-gradient(rgba(styles.$cyan-600, 0.85), rgba(styles.$cyan-600, 0.85)), url(../assets/mobile/image-footer.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    padding:  styles.$spacing-800-64  styles.$spacing-400-32 
+    position: relative
+    div.main-text
+        display: flex
+        flex-direction: column
+        @media (min-width: 1120px)
+            flex-direction: row
+            justify-content: space-around
+    p
+        @media (hover) and (min-width: 1120px)
+            text-align: left
+    p.h2-like, p.description
+        color: styles.$white
+        @media (hover) and (min-width: 1120px)
+            max-width: 35rem   

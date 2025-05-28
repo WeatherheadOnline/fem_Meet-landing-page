@@ -4,16 +4,26 @@ html {
 
 h1 {
   font-weight: 900;
-  font-size: 6.4rem;
+  font-size: 11vw;
   line-height: 110%;
   letter-spacing: 0;
+}
+@media (hover), (min-width: 700px) {
+  h1 {
+    font-size: 6.4rem;
+  }
 }
 
 .h2-like {
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 9vw;
   line-height: 110%;
   letter-spacing: 0;
+}
+@media (hover), (min-width: 700px) {
+  .h2-like {
+    font-size: 4rem;
+  }
 }
 
 .tagline {
@@ -23,11 +33,16 @@ h1 {
   letter-spacing: 4px;
 }
 
-.header-text-buttons p, .description {
+.description, .header-text-buttons p {
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 4.35vw;
   line-height: 150%;
   letter-spacing: 0;
+}
+@media (hover), (min-width: 700px) {
+  .description, .header-text-buttons p {
+    font-size: 1.8rem;
+  }
 }
 
 .number p, button {
@@ -69,34 +84,36 @@ button {
   color: #d9b8ff;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.number-component {
+  margin: 0 auto;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  top: -10.8rem;
+  left: 50%;
+  transform: translatex(-2.8rem);
 }
 
-h1, p {
-  margin: 0.3rem 0;
+.vertical-line {
+  height: 10.8rem;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(to right, transparent 48%, #d1d1df 49.5%, #d1d1df 50.5%, transparent 52%);
 }
 
-body {
-  font-family: "Red Hat Display";
-  font-optical-sizing: auto;
+.number {
   background-color: #fafafa;
-  max-width: 100vw;
-  text-align: center;
+  border: 2px solid #d1d1df;
+  border-radius: 50%;
+  margin: 0;
+  height: 5.8rem;
+  width: 5.8rem;
+  display: flex;
+  align-items: center;
+  transform: translateY(2.8rem);
 }
-
-.meet-logo img {
-  width: 11.8rem;
-  height: auto;
-  text-align: center;
-  margin-top: 4.8rem;
-}
-@media (hover: hover) and (min-width: 700px) {
-  .meet-logo img {
-    margin-top: 5.2rem;
-  }
+.number p {
+  margin: 0 auto;
 }
 
 header {
@@ -208,10 +225,7 @@ header {
 h1 {
   margin-bottom: 2.4rem;
   text-wrap: balance;
-}
-
-header p {
-  text-wrap: balance;
+  color: #28283d;
 }
 
 .button-wrapper {
@@ -255,6 +269,9 @@ main {
     width: 112rem;
   }
 }
+main .main-text {
+  padding-bottom: 6.4rem;
+}
 
 .image-container {
   display: grid;
@@ -269,7 +286,6 @@ main {
     grid-template: 1fr/repeat(4, 1fr);
   }
 }
-
 .image-container img {
   width: 100%;
   height: auto;
@@ -279,48 +295,15 @@ main {
 .tagline {
   text-transform: uppercase;
   margin-bottom: 1.6rem;
+  color: rgb(77, 150, 169);
 }
 
-.h2-like {
-  margin-bottom: 3.2rem;
-}
-
-.number-component {
-  margin: 0 auto;
-  width: -moz-max-content;
-  width: max-content;
-  position: absolute;
-  top: -10.8rem;
-  left: 50%;
-  transform: translatex(-2.8rem);
-}
-
-.vertical-line {
-  height: 10.8rem;
-  display: flex;
-  align-items: flex-end;
-  background: linear-gradient(to right, transparent 48%, #28283d 49.5%, #28283d 50.5%, transparent 52%);
-}
-
-.number {
-  background-color: #fafafa;
-  border: 1px solid #87879d;
-  border-radius: 50%;
-  margin: 0;
-  height: 5.6rem;
-  width: 5.6rem;
-  display: flex;
-  align-items: center;
-  transform: translateY(2.8rem);
-}
-
-.number p {
-  margin: 0 auto;
-  color: #28283d;
-}
-
-main .main-text {
-  padding-bottom: 6.4rem;
+@media (hover) and (min-width: 700px) {
+  .main-text-wrapper {
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 footer {
@@ -328,10 +311,8 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 6.4rem 3.2rem;
-  color: #fafafa;
   position: relative;
 }
-
 footer div.main-text {
   display: flex;
   flex-direction: column;
@@ -342,21 +323,48 @@ footer div.main-text {
     justify-content: space-around;
   }
 }
-
 @media (hover) and (min-width: 1120px) {
   footer p {
     text-align: left;
   }
 }
-
+footer p.h2-like, footer p.description {
+  color: #fafafa;
+}
 @media (hover) and (min-width: 1120px) {
-  footer p.h2-like {
-    max-width: 30rem;
+  footer p.h2-like, footer p.description {
+    max-width: 35rem;
   }
 }
 
-@media (hover) and (min-width: 1120px) {
-  footer p.description {
-    max-width: 45rem;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Display";
+  font-optical-sizing: auto;
+  background-color: #fafafa;
+  max-width: 100vw;
+  text-align: center;
+  color: #87879d;
+}
+
+.meet-logo img {
+  width: 11.8rem;
+  height: auto;
+  text-align: center;
+  margin-top: 4.8rem;
+}
+@media (hover: hover) and (min-width: 700px) {
+  .meet-logo img {
+    margin-top: 5.2rem;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+.h2-like {
+  margin-bottom: 3.2rem;
+  color: #28283d;
+}/*# sourceMappingURL=styles.css.map */
